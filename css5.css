@@ -1,0 +1,241 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    line-height: 1.5rem;
+    overflow-x: hidden;
+}
+/*for every class of container and bg-color*/
+.container{
+    min-height: 60px;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.bg-color{
+    background-color: rgb(34, 58, 71);
+    color: whitesmoke;
+}
+
+/*nav-bar*/
+.nav-bar{
+    border-bottom:  2px solid orangered;
+    text-align: center;
+}
+/*nav-bar h1*/
+.nav-bar h1{
+    font-size: 22px;
+}
+.nav-bar h1 span{
+    color: orangered;
+}
+/*nav-bar ul*/
+.nav-bar li{
+    list-style: none;
+    text-transform: uppercase;
+    padding-left: 30px;
+    }
+.nav-bar li:first-child a{
+    color: orangered;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.nav-bar a:hover{
+    color: orangered;
+    
+}
+.nav-bar ul{
+    display: flex;
+}
+/*background img and text*/
+.bg-img1{
+    background-image: url(../Images/photo-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+}
+.bg-img1 .txt-bg{
+    width: 80vw;
+}
+.bg-img1 .txt-bg h1{
+    padding-bottom: 10px;
+}
+/*sub-bar*/
+.sub-bar h1{
+    font-size: 20px;
+}
+.sub-bar input[type="submit"]{
+    background-color: orangered;
+    color: whitesmoke;
+}
+.sub-bar input[type="text"], input[type="submit"]{
+    padding: 5px 10px 5px 10px;
+    border: none;
+}
+/*icons and text*/
+.icon{
+    font-size: 80px;
+    margin-top: 30px;
+}
+.icons-txt h1{
+    font-size: 18px;
+    margin: 20px 0 10px 0;
+}
+.icons-txt{
+    text-align: center;
+    margin-bottom: 50px;  
+}
+.icons-txt .pad{
+    padding: 0 30px 0 30px;
+}
+/*about page*/
+.about{
+    width: 80vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+.about .first-about h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.about .first-about{
+    margin-bottom: 10px;
+
+}
+.about .second-about, .third-about{
+    background-color: rgb(34, 58, 71);
+    padding: 20px;
+    color: whitesmoke;
+}
+.about .third-about h1{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.about .third-about{
+    height: 200px;
+}
+/*service page*/
+.services h1{
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.wraper-service-form{
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    
+}
+.services{
+    background-color: rgb(204, 204, 204);
+    margin-bottom: 10px;
+}
+.services > h1{
+    background-color: whitesmoke;
+}
+.services .first-service, .second-service, .third-service{
+    border: 3px solid whitesmoke;
+    padding: 20px;
+}
+/*form*/
+.form-service {
+    background-color: rgb(34, 58, 71);
+    margin-top: 20px;
+    padding: 20px;
+    height: 280px; 
+    color: whitesmoke;  
+    
+}
+.form-service h1{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.form-service input[type="submit"]{
+    margin-top: 10px;
+    background-color: orangered;
+    color: whitesmoke;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+}
+.form-service input[type="text"],input[type="email"]{
+    border: none;
+    padding: 5px;
+    width: 100%;
+}
+
+/*footer*/
+.footer{
+    background-color: orangered;
+}
+.footer h1{
+    font-size: 16px;
+}
+.footer .container{
+    justify-content: center;
+}
+/*media query*/
+@media (max-width: 900px){
+     .about,.wraper-service-form{
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+     }
+     .wraper-service-form{
+         margin-bottom: 20px;
+     }
+     .nav-bar li{
+        padding: 15px;
+     }
+     .container{
+         flex-flow: column wrap;
+         padding-top: 20px;
+         padding-bottom: 20px;
+     }
+     .nav-bar h1, .sub-bar h1{
+         margin-bottom: 10px;
+     }
+}
+@media (max-width: 500px){
+    .nav-bar ul{
+        flex-direction: column;
+    }
+    .sub-bar form input[type="text"],
+    .sub-bar form input[type="submit"]{
+        display: block;
+        width: 100%;
+        padding: 10px 40px 10px 40px;
+    }
+    .sub-bar form input[type="text"]{
+        margin-bottom: 10px;
+    }
+    .sub-bar form input[type="submit"]{
+        font-weight: bold;
+    }
+    .form-service input[type="submit"]{
+        width: 100%;
+    }
+}
